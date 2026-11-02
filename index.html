@@ -338,6 +338,12 @@ footer p {font-size:12px;color:#aaa397;line-height:1.8}
  .photo-info {padding:17px}
 }
 
+
+/* Collapsible booking enquiry */
+.booking-toggle {cursor:pointer;min-width:240px}
+.booking-form[hidden] {display:none!important}
+.booking-form:not([hidden]) {display:block}
+
 </style>
 </head>
 <body>
@@ -538,7 +544,13 @@ footer p {font-size:12px;color:#aaa397;line-height:1.8}
   <h2>Send a Booking Enquiry</h2>
   <p>Share your details and preferred dates. Your enquiry will be sent to our team through WhatsApp for confirmation.</p>
  </div>
- <form class="booking-form" id="bookingForm">
+ <div style="text-align:center;margin:25px 0">
+  <button class="btn booking-toggle" id="bookingToggle" type="button"
+   aria-expanded="false" aria-controls="bookingForm">
+   BOOK A ROOM / CHECK AVAILABILITY
+  </button>
+ </div>
+ <form class="booking-form" id="bookingForm" hidden>
   <div class="form-grid">
    <div class="field">
     <label for="guestName">Full name *</label>
@@ -670,6 +682,28 @@ document.getElementById("bookingForm").addEventListener("submit",function(event)
  const text = `Hello AMAZON HOTEL, I would like to make a booking enquiry.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ACheck-in: ${checkin}%0ACheck-out: ${checkout}%0AGuests: ${encodeURIComponent(guests)}%0ARoom preference: ${encodeURIComponent(room)}%0AAdditional message: ${encodeURIComponent(message)}`;
  window.open("https://wa.me/254716397341?text="+text,"_blank");
 });
+
+/* Show booking form only when requested */
+const bookingForm = document.getElementById("bookingForm");
+const bookingToggle = document.getElementById("bookingToggle");
+
+bookingToggle.addEventListener("click", () => {
+  bookingForm.hidden = !bookingForm.hidden;
+  const isOpen = !bookingForm.hidden;
+  bookingToggle.setAttribute("aria-expanded", String(isOpen));
+  bookingToggle.textContent = isOpen
+    ? "CLOSE BOOKING FORM"
+    : "BOOK A ROOM / CHECK AVAILABILITY";
+});
+
+document.querySelectorAll('a[href="#booking"]').forEach(link => {
+  link.addEventListener("click", () => {
+    bookingForm.hidden = false;
+    bookingToggle.setAttribute("aria-expanded", "true");
+    bookingToggle.textContent = "CLOSE BOOKING FORM";
+  });
+});
+
 </script>
 </body>
 </html>
