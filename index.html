@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Discover AMAZON HOTEL along Waiyaki Way, Nairobi. Contact our team for booking enquiries.">
+<title>AMAZON HOTEL | Nairobi, Kenya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+ --dark:#17211e;
+ --green:#263b32;
+ --gold:#c5a36b;
+ --cream:#f7f5ef;
+ --white:#fff;
+ --muted:#777d78;
+}
+* {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
+body {font-family:'DM Sans',sans-serif;color:#26312c;background:var(--cream);line-height:1.7}
+a {text-decoration:none;color:inherit}
+button,input,select,textarea {font:inherit}
+.topbar {background:var(--dark);color:#eee;padding:10px 6%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px}
+.topbar span {color:var(--gold)}
+header {background:#fff;display:flex;align-items:center;justify-content:space-between;padding:18px 6%;position:sticky;top:0;z-index:10;box-shadow:0 3px 18px #0000000a}
+.logo {font-family:'Playfair Display',serif;font-size:25px;font-weight:700;letter-spacing:2px;color:var(--green)}
+.logo small {display:block;font:10px 'DM Sans',sans-serif;letter-spacing:5px;color:var(--gold);text-align:center}
+nav {display:flex;align-items:center;gap:25px;font-size:13px;font-weight:600}
+nav a:hover {color:#a7834b}
+.nav-btn,.btn {display:inline-block;background:var(--gold);color:#17211e;padding:13px 22px;font-size:11px;font-weight:700;letter-spacing:1.5px;border:0;cursor:pointer}
+.menu-btn {display:none;background:none;border:0;font-size:25px;color:var(--green)}
+.hero {min-height:590px;background:linear-gradient(90deg,#101b18df,#101b1870),url('assets/images/2ccc9a79c8610782937c5e578e2425ba.jpg') center/cover;display:flex;align-items:center;padding:80px 9%;color:#fff}
+.hero-content {max-width:650px}
+.eyebrow {color:var(--gold);font-size:11px;letter-spacing:4px;font-weight:700}
+.hero h1 {font:clamp(42px,7vw,76px)/1.12 'Playfair Display',serif;margin:22px 0}
+.hero p {max-width:510px;color:#e1e4df;font-size:15px;margin-bottom:30px}
+.hero .btn {margin-right:12px}
+.btn-outline {display:inline-block;border:1px solid #ffffffa8;color:#fff;padding:12px 21px;font-size:11px;letter-spacing:1.5px;font-weight:700}
+section {padding:85px 8%}
+.section-head {text-align:center;max-width:650px;margin:0 auto 45px}
+.section-head h2 {font:clamp(30px,4vw,43px) 'Playfair Display',serif;color:var(--green);margin:12px 0}
+.section-head p {color:var(--muted);font-size:14px}
+.about {display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center;background:#fff}
+.about img {width:100%;height:390px;object-fit:cover}
+.about h2 {font:40px 'Playfair Display',serif;color:var(--green);margin:13px 0 20px}
+.about p {color:var(--muted);font-size:14px;margin-bottom:17px}
+.gallery {background:var(--cream)}
+.gallery-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.photo-card {background:#fff;overflow:hidden;box-shadow:0 8px 30px #0000000d;transition:transform .3s,box-shadow .3s}
+.photo-card:hover {transform:translateY(-6px);box-shadow:0 15px 35px #00000018}
+.photo-card img {width:100%;height:235px;object-fit:cover;display:block;transition:transform .5s}
+.photo-card:hover img {transform:scale(1.04)}
+.photo-info {padding:21px}
+.photo-number {color:#a7834b;font-size:10px;letter-spacing:2px;font-weight:700}
+.photo-info h3 {font:22px 'Playfair Display',serif;margin:10px 0;color:var(--green)}
+.photo-info p {color:var(--muted);font-size:13px;line-height:1.8;min-height:70px}
+.photo-info a {display:inline-block;margin-top:15px;color:#98733e;font-size:10px;font-weight:700;letter-spacing:1px}
+.booking {background:var(--green);color:#fff}
+.booking .section-head h2 {color:#fff}
+.booking .section-head p {color:#d0d7d1}
+.booking-form {max-width:760px;margin:auto;background:#fff;color:#26312c;padding:35px}
+.form-grid {display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field {display:flex;flex-direction:column;gap:7px}
+.field.full {grid-column:1/-1}
+.field label {font-size:12px;font-weight:700}
+.field input,.field select,.field textarea {width:100%;padding:13px;border:1px solid #ddd;background:#fff;color:#26312c;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus {border-color:var(--gold)}
+.field textarea {min-height:100px;resize:vertical}
+.booking-form button {width:100%;margin-top:22px}
+.form-note {font-size:11px;color:#777;margin-top:13px;text-align:center}
+.contact {background:#fff;text-align:center}
+.contact-details {display:flex;justify-content:center;gap:35px;flex-wrap:wrap;margin:30px 0;color:#536057;font-size:14px}
+.contact-details strong {display:block;color:var(--green);margin-bottom:5px}
+footer {background:var(--dark);color:#ddd;text-align:center;padding:35px 15px;font-size:12px}
+footer .logo {color:#fff;margin-bottom:12px}
+footer p {color:#b8c0ba}
+.whatsapp-float {position:fixed;right:20px;bottom:20px;background:#218c55;color:#fff;padding:14px 19px;border-radius:30px;font-size:12px;font-weight:700;z-index:20;box-shadow:0 5px 20px #0003}
+@media(max-width:850px) {
+ nav {gap:13px}
+ .gallery-grid {grid-template-columns:repeat(2,1fr)}
+ .about {gap:30px}
+}
+@media(max-width:650px) {
+ header {padding:15px 5%}
+ .menu-btn {display:block}
+ nav {display:none;position:absolute;top:72px;left:0;right:0;background:#fff;padding:22px;flex-direction:column;align-items:stretch;box-shadow:0 10px 15px #0001}
+ nav.open {display:flex}
+ nav a {padding:7px}
+ .topbar {justify-content:center;text-align:center}
+ .hero {min-height:530px;padding:65px 7%}
+ section {padding:65px 6%}
+ .about {grid-template-columns:1fr}
+ .about img {height:270px}
+ .gallery-grid {grid-template-columns:1fr 1fr;gap:12px}
+ .photo-card img {height:150px}
+ .photo-info {padding:13px}
+ .photo-info h3 {font-size:17px}
+ .photo-info p {font-size:11px;min-height:105px}
+ .photo-info a {font-size:9px}
+ .booking-form {padding:22px 16px}
+ .form-grid {grid-template-columns:1fr}
+ .field.full {grid-column:auto}
+ .contact-details {gap:20px}
+}
+
+/* Expanded hotel website sections */
+.feature-grid,.experience-grid,.travel-grid,.faq-grid {
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:22px;
+}
+.info-card {
+ background:#fff;
+ padding:28px;
+ border-bottom:3px solid var(--gold);
+ box-shadow:0 8px 25px #00000008;
+}
+.info-card h3 {
+ font:23px 'Playfair Display',serif;
+ color:var(--green);
+ margin:12px 0;
+}
+.info-card p {color:var(--muted);font-size:13px}
+.info-icon {font-size:27px;color:var(--gold)}
+.story {background:#fff}
+.story-content {max-width:850px;margin:auto;text-align:center}
+.story-content p {color:var(--muted);font-size:14px;margin:16px 0}
+.travel {background:#edf0e9}
+.travel-grid {grid-template-columns:repeat(2,1fr)}
+.faq-grid {grid-template-columns:repeat(2,1fr)}
+.faq-item {padding:20px;border-bottom:1px solid #ddd}
+.faq-item h3 {font:20px 'Playfair Display',serif;color:var(--green);margin-bottom:8px}
+.faq-item p {font-size:13px;color:var(--muted)}
+.cta-band {background:var(--dark);color:white;text-align:center;padding:65px 8%}
+.cta-band h2 {font:38px 'Playfair Display',serif;margin:12px 0}
+.cta-band p {color:#d0d7d1;margin-bottom:22px}
+@media(max-width:650px) {
+ .feature-grid,.experience-grid,.travel-grid,.faq-grid {grid-template-columns:1fr}
+ .info-card {padding:22px}
+ .cta-band h2 {font-size:29px}
+}
+
+
+/* AMAZON HOTEL PREMIUM LUXURY DESIGN */
+:root {
+ --dark:#101713;
+ --green:#1c3026;
+ --gold:#c9a66b;
+ --cream:#f5f2eb;
+ --white:#ffffff;
+ --muted:#777c76;
+}
+body {background:var(--cream);color:#202a24}
+.topbar {background:#101713;letter-spacing:1px}
+header {background:#fff;padding-top:21px;padding-bottom:21px}
+.logo {letter-spacing:3px}
+.logo small {color:#b18c52;letter-spacing:6px}
+nav a {transition:color .25s}
+nav a:hover {color:#b18c52}
+.nav-btn,.btn {
+ background:linear-gradient(120deg,#b18c52,#dfc38e);
+ color:#172019;
+ transition:transform .25s,box-shadow .25s;
+}
+.nav-btn:hover,.btn:hover {
+ transform:translateY(-3px);
+ box-shadow:0 9px 22px #0002;
+}
+.hero {
+ min-height:680px;
+ background-image:linear-gradient(90deg,#0b1511e8 0%,#101b187d 58%,#101b1830 100%),url('assets/images/2ccc9a79c8610782937c5e578e2425ba.jpg');
+}
+.hero h1 {letter-spacing:-1px}
+.hero p {font-size:16px;line-height:1.9}
+.eyebrow {letter-spacing:5px}
+section {padding-top:105px;padding-bottom:105px}
+.section-head {margin-bottom:55px}
+.section-head h2,.about h2 {letter-spacing:-.5px}
+.about {background:#fff}
+.about img {
+ height:460px;
+ box-shadow:18px 18px 0 #c9a66b;
+}
+.gallery {background:#f2efe7}
+.photo-card {
+ border:1px solid #e9e3d7;
+ box-shadow:0 12px 35px #1720190c;
+}
+.photo-card img {height:270px}
+.photo-info {padding:25px}
+.photo-number {letter-spacing:3px}
+.photo-info h3 {font-size:24px}
+.info-card {
+ border:1px solid #e8e1d4;
+ border-bottom:3px solid var(--gold);
+ transition:transform .3s,box-shadow .3s;
+}
+.info-card:hover {
+ transform:translateY(-6px);
+ box-shadow:0 15px 35px #17201912;
+}
+.story {background:#fff}
+.travel {background:#e9ede6}
+.booking {background:#17271f}
+.booking-form {
+ box-shadow:0 20px 60px #0003;
+ border-top:4px solid var(--gold);
+}
+.field input,.field select,.field textarea {
+ border-radius:0;
+ padding:15px;
+}
+.contact {background:#fff}
+.contact-details strong {color:#a7834b;letter-spacing:1px}
+.cta-band {
+ background:linear-gradient(120deg,#101713,#263d30);
+ border-top:1px solid #c9a66b55;
+}
+footer {background:#0c120f;border-top:3px solid var(--gold)}
+.whatsapp-float {
+ box-shadow:0 8px 25px #0004;
+ transition:transform .2s;
+}
+.whatsapp-float:hover {transform:translateY(-4px)}
+@media(max-width:650px) {
+ section {padding-top:70px;padding-bottom:70px}
+ .hero {min-height:560px}
+ .about img {height:280px;box-shadow:10px 10px 0 #c9a66b}
+ .photo-card img {height:165px}
+ .photo-info {padding:14px}
+}
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+ <div>NAIROBI, KENYA <span>•</span> WAIYAKI WAY</div>
+ <div>CALL US: <span>0716397341</span></div>
+</div>
+
+<header>
+ <a href="#" class="logo">AMAZON HOTEL<small>NAIROBI · KENYA</small></a>
+ <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+ <nav id="mainNav">
+  <a href="#home">HOME</a>
+  <a href="#about">ABOUT</a>
+  <a href="#accommodation">ROOMS</a>
+  <a href="#gallery">GALLERY</a>
+  <a href="#experience">EXPERIENCE</a>
+  <a href="#explore">NAIROBI</a>
+  <a href="#faq">FAQ</a>
+  <a href="#booking">BOOKING</a>
+  <a href="#contact">CONTACT</a>
+  <a class="nav-btn" href="#booking">ENQUIRE NOW</a>
+ </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="hero-content">
+  <div class="eyebrow">WELCOME TO AMAZON HOTEL</div>
+  <h1>A Place to Feel Welcome.</h1>
+  <p>Discover AMAZON HOTEL along Waiyaki Way in Nairobi. Explore our photo gallery and contact our team to make an enquiry about your visit.</p>
+  <a class="btn" href="#booking">MAKE AN ENQUIRY</a>
+  <a class="btn-outline" href="#gallery">EXPLORE HOTEL</a>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <div>
+  <img src="assets/images/2e46795e6cc57e3d661e078727055d12.jpg" alt="AMAZON HOTEL photo" loading="lazy">
+ </div>
+ <div>
+  <div class="eyebrow">GET TO KNOW US</div>
+  <h2>Welcome to AMAZON HOTEL</h2>
+  <p>AMAZON HOTEL is located along Waiyaki Way in Nairobi, Kenya. We invite you to explore our hotel through the photographs on this website.</p>
+  <p>For enquiries about your preferred dates, room options and other details, contact our team directly. We will be happy to hear from you.</p>
+  <a class="btn" href="#contact">CONTACT OUR TEAM</a>
+ </div>
+</section>
+
+
+<section class="story">
+ <div class="story-content">
+  <div class="eyebrow">THE AMAZON HOTEL EXPERIENCE</div>
+  <h2 style="font:40px 'Playfair Display',serif;color:var(--green);margin:15px 0">More Than a Place to Visit</h2>
+  <p>Welcome to AMAZON HOTEL, located along Waiyaki Way in Nairobi, Kenya. We believe that a good hotel experience begins with a warm welcome, clear communication and attention to the needs of every guest.</p>
+  <p>Whether you are planning a visit to Nairobi, arranging accommodation or making an enquiry on behalf of someone else, our team is available to help you find the information you need.</p>
+  <p>Explore our photographs, learn more about our location and contact us directly to discuss your preferred dates and requirements.</p>
+ </div>
+</section>
+
+<section id="accommodation">
+ <div class="section-head">
+  <div class="eyebrow">PLAN YOUR STAY</div>
+  <h2>Accommodation Enquiries</h2>
+  <p>Looking for accommodation in Nairobi? Contact AMAZON HOTEL to ask about available room options, rates and booking arrangements.</p>
+ </div>
+ <div class="feature-grid">
+  <article class="info-card">
+   <div class="info-icon">01</div>
+   <h3>Room Availability</h3>
+   <p>Tell us your preferred arrival and departure dates so our team can advise you about availability.</p>
+  </article>
+  <article class="info-card">
+   <div class="info-icon">02</div>
+   <h3>Rates & Information</h3>
+   <p>Ask about current room rates, applicable terms and the details you need before making a booking.</p>
+  </article>
+  <article class="info-card">
+   <div class="info-icon">03</div>
+   <h3>Booking Assistance</h3>
+   <p>Share your requirements with our team and receive guidance on the next steps for your reservation.</p>
+  </article>
+ </div>
+ <div style="text-align:center;margin-top:32px">
+  <a class="btn" href="#booking">ASK ABOUT ROOMS</a>
+ </div>
+</section>
+
+<section class="story" id="experience">
+ <div class="section-head">
+  <div class="eyebrow">A PERSONAL APPROACH</div>
+  <h2>Planning a Better Visit</h2>
+  <p>Every visit starts with knowing what you need. Get in touch with the hotel team before you travel.</p>
+ </div>
+ <div class="experience-grid">
+  <article class="info-card">
+   <div class="info-icon">✦</div>
+   <h3>Clear Communication</h3>
+   <p>Contact the hotel directly to ask questions and discuss your accommodation requirements.</p>
+  </article>
+  <article class="info-card">
+   <div class="info-icon">✦</div>
+   <h3>Plan Ahead</h3>
+   <p>Share your travel dates early so you can ask about availability and make informed arrangements.</p>
+  </article>
+  <article class="info-card">
+   <div class="info-icon">✦</div>
+   <h3>Helpful Information</h3>
+   <p>Ask about directions, room options, rates and any arrangements you should know before arrival.</p>
+  </article>
+ </div>
+</section>
+
+<section class="travel" id="explore">
+ <div class="section-head">
+  <div class="eyebrow">DISCOVER THE CITY</div>
+  <h2>Explore Nairobi, Kenya</h2>
+  <p>Nairobi offers a mix of city life, culture, shopping, food and opportunities to explore. Make time to discover the city during your visit.</p>
+ </div>
+ <div class="travel-grid">
+  <article class="info-card">
+   <div class="info-icon">01</div>
+   <h3>City Experiences</h3>
+   <p>Discover Nairobi's urban atmosphere, local neighbourhoods and the different experiences the capital has to offer.</p>
+  </article>
+  <article class="info-card">
+   <div class="info-icon">02</div>
+   <h3>Culture & Heritage</h3>
+   <p>Explore Kenyan culture, art, history and local traditions as you experience the city.</p>
+  </article>
+  <article class="info-card">
+   <div class="info-icon">03</div>
+   <h3>Food & Shopping</h3>
+   <p>Discover local restaurants, shopping areas and a variety of Kenyan food experiences around the city.</p>
+  </article>
+  <article class="info-card">
+   <div class="info-icon">04</div>
+   <h3>Plan Your Journey</h3>
+   <p>Check your route and travel arrangements in advance. Contact the hotel if you need help confirming its location.</p>
+  </article>
+ </div>
+</section>
+
+<section id="faq">
+ <div class="section-head">
+  <div class="eyebrow">NEED TO KNOW?</div>
+  <h2>Frequently Asked Questions</h2>
+  <p>Some helpful information before you contact AMAZON HOTEL.</p>
+ </div>
+ <div class="faq-grid">
+  <article class="faq-item">
+   <h3>Where is AMAZON HOTEL located?</h3>
+   <p>We are located along Waiyaki Way, Nairobi, Kenya. Contact us for directions and further location details.</p>
+  </article>
+  <article class="faq-item">
+   <h3>How can I enquire about a room?</h3>
+   <p>Complete the booking enquiry form on this website. It will prepare a message for you to send through WhatsApp.</p>
+  </article>
+  <article class="faq-item">
+   <h3>Are room prices displayed online?</h3>
+   <p>Contact the hotel directly for current rates, available room options and applicable booking terms.</p>
+  </article>
+  <article class="faq-item">
+   <h3>Is my booking confirmed after submitting the form?</h3>
+   <p>No. The form sends an enquiry only. Wait for the hotel team to respond and confirm your reservation.</p>
+  </article>
+  <article class="faq-item">
+   <h3>Can I ask about availability before travelling?</h3>
+   <p>Yes. Send your preferred dates and number of guests so the team can advise you.</p>
+  </article>
+  <article class="faq-item">
+   <h3>How do I contact the hotel?</h3>
+   <p>Call 0716397341 or send a WhatsApp message using the contact links on this website.</p>
+  </article>
+ </div>
+</section>
+
+<section class="cta-band">
+ <div class="eyebrow">YOUR NAIROBI VISIT STARTS HERE</div>
+ <h2>Let's Help You Plan Your Stay</h2>
+ <p>Contact AMAZON HOTEL for room enquiries, rates and booking information.</p>
+ <a class="btn" href="https://wa.me/254716397341">CONTACT US ON WHATSAPP</a>
+</section>
+
+<section class="gallery" id="gallery">
+ <div class="section-head">
+  <div class="eyebrow">EXPLORE AMAZON HOTEL</div>
+  <h2>A Look Around Our Hotel</h2>
+  <p>Explore our collection of photographs. Contact us if you would like more information about anything you see.</p>
+ </div>
+ <div class="gallery-grid" id="photos"></div>
+</section>
+
+<section class="booking" id="booking">
+ <div class="section-head">
+  <div class="eyebrow">PLAN YOUR VISIT</div>
+  <h2>Send a Booking Enquiry</h2>
+  <p>Share your details and preferred dates. Your enquiry will be sent to our team through WhatsApp for confirmation.</p>
+ </div>
+ <form class="booking-form" id="bookingForm">
+  <div class="form-grid">
+   <div class="field">
+    <label for="guestName">Full name *</label>
+    <input id="guestName" required placeholder="Enter your full name">
+   </div>
+   <div class="field">
+    <label for="guestPhone">Phone number *</label>
+    <input id="guestPhone" type="tel" required placeholder="Your phone number">
+   </div>
+   <div class="field">
+    <label for="checkin">Check-in date *</label>
+    <input id="checkin" type="date" required>
+   </div>
+   <div class="field">
+    <label for="checkout">Check-out date *</label>
+    <input id="checkout" type="date" required>
+   </div>
+   <div class="field">
+    <label for="guests">Number of guests *</label>
+    <select id="guests" required>
+     <option value="">Select guests</option>
+     <option>1</option><option>2</option><option>3</option><option>4</option><option>5 or more</option>
+    </select>
+   </div>
+   <div class="field">
+    <label for="room">Room preference</label>
+    <select id="room">
+     <option value="Please advise">Please advise</option>
+     <option>Single room enquiry</option>
+     <option>Double room enquiry</option>
+     <option>Other / not sure</option>
+    </select>
+   </div>
+   <div class="field full">
+    <label for="message">Additional message</label>
+    <textarea id="message" placeholder="Any questions or special requests?"></textarea>
+   </div>
+  </div>
+  <button class="btn" type="submit">SEND ENQUIRY ON WHATSAPP</button>
+  <p class="form-note">This form sends an enquiry only. Your booking is not confirmed until the hotel team responds.</p>
+ </form>
+</section>
+
+<section class="contact" id="contact">
+ <div class="section-head">
+  <div class="eyebrow">WE ARE HERE TO HELP</div>
+  <h2>Contact AMAZON HOTEL</h2>
+  <p>Get in touch with our team for enquiries and booking information.</p>
+ </div>
+ <div class="contact-details">
+  <div><strong>LOCATION</strong>Along Waiyaki Way, Nairobi, Kenya</div>
+  <div><strong>PHONE</strong>0716397341</div>
+  <div><strong>WHATSAPP</strong>+254 716 397 341</div>
+ </div>
+ <a class="btn" href="https://wa.me/254716397341">CHAT WITH US</a>
+</section>
+</main>
+
+<footer>
+ <div class="logo">AMAZON HOTEL</div>
+ <p>Along Waiyaki Way, Nairobi, Kenya</p>
+ <p>Phone: 0716397341</p>
+ <p style="margin-top:15px">© <span id="year"></span> AMAZON HOTEL. All rights reserved.</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/254716397341">WHATSAPP US</a>
+
+<script>
+const hotelPhotos = [
+ ["2ccc9a79c8610782937c5e578e2425ba.jpg","A Place to Unwind","Discover a welcoming atmosphere designed to make every visit memorable."],
+ ["2e46795e6cc57e3d661e078727055d12.jpg","Comfort & Style","Explore the spaces and surroundings of AMAZON HOTEL."],
+ ["38dc5e0b9281a0ac4804c979e1df5415.jpg","Your Hotel Experience","Enjoy a welcoming environment during your stay in Nairobi."],
+ ["46a21cbe38af34bc391044de97e3a7eb.jpg","Discover Our Spaces","Take a closer look at what makes AMAZON HOTEL special."],
+ ["56557bde8e7158c99969786c2036d3f9.jpg","A Warm Welcome","Experience friendly hospitality in a convenient Nairobi location."],
+ ["5e7c814e5fe84a2e99ca1c4dd3b18df1.jpg","Relax & Enjoy","Make your visit memorable in a welcoming hotel environment."],
+ ["695fcc075fd6598c9e103a9489287cb7.jpg","Explore the Details","Discover more of AMAZON HOTEL through our photo collection."],
+ ["6c3db8279dbed0458d9892d6f2b66004.jpg","A Memorable Stay","A closer look at the atmosphere and spaces of our hotel."],
+ ["6debcb305ad1d8b0a30f5a40355693e3.jpg","Welcome to Nairobi","Your journey to a comfortable hotel experience starts here."],
+ ["759fe80a857bd2707a1e869d1cefc552.jpg","Designed for Comfort","Discover the character and atmosphere of AMAZON HOTEL."],
+ ["a77a9b57d869e68552e1762f9f9cee53.jpg","Experience AMAZON","Explore our hotel and contact our team for enquiries."],
+ ["c5dff21b47dc34d69240c71621cd4830.jpg","Your Next Visit","We look forward to welcoming you to AMAZON HOTEL."],
+ ["e78cc4443da3b98f9a8836fe06305fe1.jpg","See You Soon","Get in touch with our team to plan your visit."]
+];
+
+document.getElementById("photos").innerHTML = hotelPhotos.map((photo,i)=>`
+ <article class="photo-card">
+  <img src="assets/images/${photo[0]}" alt="${photo[1]}" loading="lazy">
+  <div class="photo-info">
+   <span class="photo-number">${String(i+1).padStart(2,"0")} / AMAZON HOTEL</span>
+   <h3>${photo[1]}</h3>
+   <p>${photo[2]}</p>
+   <a href="https://wa.me/254716397341?text=Hello%20AMAZON%20HOTEL%2C%20I%20would%20like%20to%20make%20an%20enquiry.">MAKE AN ENQUIRY →</a>
+  </div>
+ </article>
+`).join("");
+
+document.getElementById("menuBtn").addEventListener("click",()=>{
+ document.getElementById("mainNav").classList.toggle("open");
+});
+document.querySelectorAll("#mainNav a").forEach(link=>{
+ link.addEventListener("click",()=>document.getElementById("mainNav").classList.remove("open"));
+});
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const today = new Date().toISOString().split("T")[0];
+document.getElementById("checkin").min = today;
+document.getElementById("checkin").addEventListener("change",()=>{
+ document.getElementById("checkout").min = document.getElementById("checkin").value;
+});
+
+document.getElementById("bookingForm").addEventListener("submit",function(event){
+ event.preventDefault();
+ const name = document.getElementById("guestName").value.trim();
+ const phone = document.getElementById("guestPhone").value.trim();
+ const checkin = document.getElementById("checkin").value;
+ const checkout = document.getElementById("checkout").value;
+ const guests = document.getElementById("guests").value;
+ const room = document.getElementById("room").value;
+ const message = document.getElementById("message").value.trim();
+
+ if(!name || !phone || !checkin || !checkout || !guests){
+  alert("Please complete all required fields.");
+  return;
+ }
+ if(checkout <= checkin){
+  alert("Check-out date must be after check-in date.");
+  return;
+ }
+ const text = `Hello AMAZON HOTEL, I would like to make a booking enquiry.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ACheck-in: ${checkin}%0ACheck-out: ${checkout}%0AGuests: ${encodeURIComponent(guests)}%0ARoom preference: ${encodeURIComponent(room)}%0AAdditional message: ${encodeURIComponent(message)}`;
+ window.open("https://wa.me/254716397341?text="+text,"_blank");
+});
+</script>
+</body>
+</html>
